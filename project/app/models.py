@@ -51,6 +51,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 class Certificate(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     number = models.CharField(max_length=255, unique=True, db_index=True, blank=True, null=True)
-
+    certif = models.CharField(max_length=255, default='Certificate')
     def __str__(self):
         return self.number

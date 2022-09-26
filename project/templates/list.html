@@ -1,0 +1,43 @@
+{% block title %}
+Post
+{% endblock title %}
+
+{% block content %}
+
+    {% if certificate %} <!-- Если есть товары, то выводим таблицу с ними -->
+        <h3>
+            <table>
+                <tr>
+<!--                    <td>-->
+<!--                        №-->
+<!--                    </td>-->
+                    <td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Текст
+                    </td>
+                    <td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Номер сертификата
+                    </td>
+                    <td>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Владелец сертификата
+                    </td>
+                </tr>
+                {% for c in certificate %}
+                    <tr>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ c.certif }}
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;{{ c.number }}
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ c.owner }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </h3>
+
+    {% else %}
+        <h2>Сертификатов нет!</h2>
+    {% endif %}
+{% endblock content %}
