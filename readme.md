@@ -1,0 +1,14 @@
+Тестовое задание 
+Для запуска API требуется:
+1) pip install -r requirements.txt
+2) python manage.py makemigrations
+3) python manage.py migrate
+4) python manage.py runserver
+5) переходим в браузер по ссылке http://127.0.0.1:8000/certificate/
+6) Получаем список сертификатов
+
+Либо с помощью Docker:
+1) docker-compose build
+2) docker-compose up
+3) переходим в браузер по ссылке http://127.0.0.1:8000/certificate/
+4) Получаем список сертификатов

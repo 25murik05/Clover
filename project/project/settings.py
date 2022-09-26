@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-qh%+k+!-#jfbv!=29tnt3l2e%s)3ye-r!sq9kt*$sh#0sx6)qe
 DEBUG = True
 
 ALLOWED_HOSTS = []
+DEFAULT_FROM_EMAIL = ''
 
 
 # Application definition
@@ -125,3 +126,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'app.User'
+
+
